@@ -274,28 +274,46 @@
   };
 
   const TOOLS = [
-    { name:"PDF to Word", desc:"Convert PDFs into fully editable .docx files with layout intact.", cat:"convert", tag:"PDF → DOCX", icon:"docArrow", tint:"var(--blue)", href:"pdf-to-word.html" },
-    { name:"Word to PDF", desc:"Turn Word documents into shareable, print-ready PDFs.", cat:"convert", tag:"DOCX → PDF", icon:"doc", tint:"var(--gold-soft)" },
-    { name:"PDF to Excel", desc:"Pull tables out of PDFs into clean, editable spreadsheets.", cat:"convert", tag:"PDF → XLSX", icon:"table", tint:"var(--sage)" },
-    { name:"Excel to PDF", desc:"Export spreadsheets as fixed-layout PDFs for sharing.", cat:"convert", tag:"XLSX → PDF", icon:"table", tint:"var(--sage)" },
-    { name:"PDF to PowerPoint", desc:"Turn slides trapped in a PDF back into editable .pptx.", cat:"convert", tag:"PDF → PPTX", icon:"slides", tint:"var(--rose)" },
-    { name:"PowerPoint to PDF", desc:"Flatten a presentation into a clean, portable PDF.", cat:"convert", tag:"PPTX → PDF", icon:"slides", tint:"var(--rose)" },
-    { name:"PDF to JPG", desc:"Export every page as a high-resolution JPG image.", cat:"convert", tag:"PDF → JPG", icon:"image", tint:"var(--gold-soft)" },
-    { name:"JPG to PDF", desc:"Combine one or more images into a single PDF file.", cat:"convert", tag:"JPG → PDF", icon:"image", tint:"var(--gold-soft)" },
-    { name:"PDF to Text", desc:"Strip out raw, plain text from any PDF document.", cat:"convert", tag:"PDF → TXT", icon:"text", tint:"var(--blue)" },
-    { name:"HTML to PDF", desc:"Turn any web page or HTML file into a paginated PDF.", cat:"convert", tag:"HTML → PDF", icon:"code", tint:"var(--sage)" },
-    { name:"Merge PDF", desc:"Combine multiple PDFs into one document, in any order.", cat:"organize", tag:"Organize", icon:"merge", tint:"var(--gold-soft)" },
-    { name:"Split PDF", desc:"Break a large PDF into separate files by page range.", cat:"organize", tag:"Organize", icon:"split", tint:"var(--gold-soft)" },
-    { name:"Rotate PDF", desc:"Fix sideways or upside-down pages in a few clicks.", cat:"organize", tag:"Organize", icon:"rotate", tint:"var(--blue)" },
-    { name:"Remove Pages", desc:"Delete unwanted pages from a PDF without touching the rest.", cat:"organize", tag:"Organize", icon:"trash", tint:"var(--rose)" },
-    { name:"Reorder Pages", desc:"Drag pages into the order you actually want them in.", cat:"organize", tag:"Organize", icon:"reorder", tint:"var(--sage)" },
-    { name:"Compress PDF", desc:"Shrink file size for email or upload, with minimal quality loss.", cat:"optimize", tag:"Optimize", icon:"compress", tint:"var(--gold-soft)" },
-    { name:"OCR Scanner", desc:"Make scanned or photographed pages searchable and selectable.", cat:"optimize", tag:"Optimize", icon:"scan", tint:"var(--blue)" },
-    { name:"Protect PDF", desc:"Add a password so only the right people can open a file.", cat:"security", tag:"Security", icon:"lock", tint:"var(--gold-soft)" },
-    { name:"Unlock PDF", desc:"Remove a password from a PDF you have permission to access.", cat:"security", tag:"Security", icon:"unlock", tint:"var(--sage)" },
-    { name:"Sign PDF", desc:"Add a typed, drawn, or uploaded signature to any document.", cat:"security", tag:"Security", icon:"sign", tint:"var(--rose)" },
-  ];
+   const TOOLS = [
+  {
+    name:"PDF to Word",
+    desc:"Convert PDFs into fully editable .docx files with layout intact.",
+    cat:"convert",
+    tag:"PDF → DOCX",
+    icon:"docArrow",
+    tint:"var(--blue)",
+    href:"pdftowords.HTML"
+  },
 
+  {
+    name:"Word to PDF",
+    desc:"Turn Word documents into shareable, print-ready PDFs.",
+    cat:"convert",
+    tag:"DOCX → PDF",
+    icon:"doc",
+    tint:"var(--gold-soft)",
+    href:"word-to-pdf.html"
+  },
+
+  { name:"PDF to Excel", desc:"Pull tables out of PDFs into clean, editable spreadsheets.", cat:"convert", tag:"PDF → XLSX", icon:"table", tint:"var(--sage)" },
+  { name:"Excel to PDF", desc:"Export spreadsheets as fixed-layout PDFs for sharing.", cat:"convert", tag:"XLSX → PDF", icon:"table", tint:"var(--sage)" },
+  { name:"PDF to PowerPoint", desc:"Turn slides trapped in a PDF back into editable .pptx.", cat:"convert", tag:"PDF → PPTX", icon:"slides", tint:"var(--rose)" },
+  { name:"PowerPoint to PDF", desc:"Flatten a presentation into a clean, portable PDF.", cat:"convert", tag:"PPTX → PDF", icon:"slides", tint:"var(--rose)" },
+  { name:"PDF to JPG", desc:"Export every page as a high-resolution JPG image.", cat:"convert", tag:"PDF → JPG", icon:"image", tint:"var(--gold-soft)" },
+  { name:"JPG to PDF", desc:"Combine one or more images into a single PDF file.", cat:"convert", tag:"JPG → PDF", icon:"image", tint:"var(--gold-soft)" },
+  { name:"PDF to Text", desc:"Strip out raw, plain text from any PDF document.", cat:"convert", tag:"PDF → TXT", icon:"text", tint:"var(--blue)" },
+  { name:"HTML to PDF", desc:"Turn any web page or HTML file into a paginated PDF.", cat:"convert", tag:"HTML → PDF", icon:"code", tint:"var(--sage)" },
+  { name:"Merge PDF", desc:"Combine multiple PDFs into one document, in any order.", cat:"organize", tag:"Organize", icon:"merge", tint:"var(--gold-soft)" },
+  { name:"Split PDF", desc:"Break a large PDF into separate files by page range.", cat:"organize", tag:"Organize", icon:"split", tint:"var(--gold-soft)" },
+  { name:"Rotate PDF", desc:"Fix sideways or upside-down pages in a few clicks.", cat:"organize", tag:"Organize", icon:"rotate", tint:"var(--blue)" },
+  { name:"Remove Pages", desc:"Delete unwanted pages from a PDF without touching the rest.", cat:"organize", tag:"Organize", icon:"trash", tint:"var(--rose)" },
+  { name:"Reorder Pages", desc:"Drag pages into the order you actually want them in.", cat:"organize", tag:"Organize", icon:"reorder", tint:"var(--sage)" },
+  { name:"Compress PDF", desc:"Shrink file size for email or upload, with minimal quality loss.", cat:"optimize", tag:"Optimize", icon:"compress", tint:"var(--gold-soft)" },
+  { name:"OCR Scanner", desc:"Make scanned or photographed pages searchable and selectable.", cat:"optimize", tag:"Optimize", icon:"scan", tint:"var(--blue)" },
+  { name:"Protect PDF", desc:"Add a password so only the right people can open a file.", cat:"security", tag:"Security", icon:"lock", tint:"var(--gold-soft)" },
+  { name:"Unlock PDF", desc:"Remove a password from a PDF you have permission to access.", cat:"security", tag:"Security", icon:"unlock", tint:"var(--sage)" },
+  { name:"Sign PDF", desc:"Add a typed, drawn, or uploaded signature to any document.", cat:"security", tag:"Security", icon:"sign", tint:"var(--rose)" },
+];
   const grid = document.getElementById('toolGrid');
   const noResults = document.getElementById('noResults');
   const noResultsQuery = document.getElementById('noResultsQuery');
