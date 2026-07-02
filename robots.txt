@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maliksaqlainasghar58-bot.github.io/pdf-to-word/sitemap.xml
